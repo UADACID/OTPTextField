@@ -16,6 +16,9 @@ class OTPTextField extends StatefulWidget {
   /// Width of the single OTP Field
   final double fieldWidth;
 
+  /// Height of the single OTP Field
+  final double fieldHeight;
+
   /// space between the text fields
   final double spaceBetween;
 
@@ -68,6 +71,7 @@ class OTPTextField extends StatefulWidget {
     this.width = 10,
     this.controller,
     this.fieldWidth = 30,
+    this.fieldHeight = 60,
     this.spaceBetween = 0,
     this.otpFieldStyle,
     this.hasError = false,
@@ -176,6 +180,7 @@ class _OTPTextFieldState extends State<OTPTextField> {
 
     return Container(
       width: widget.fieldWidth,
+      height: widget.fieldHeight,
       margin: EdgeInsets.only(
         right: isLast ? 0 : widget.spaceBetween,
       ),
